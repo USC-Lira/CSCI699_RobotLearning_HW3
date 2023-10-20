@@ -45,7 +45,7 @@ def run_training(data, args):
     coil = CoIL(in_size, out_size)
     if args.restore:
         ckpt_path = (
-            "./policies/" + args.scenario.lower() + "_" + args.goal.lower() + "_ILDIST"
+            "./policies/" + args.scenario.lower() + "_" + args.goal.lower() + "_CoIL"
         )
         coil.load_state_dict(torch.load(ckpt_path))
 
